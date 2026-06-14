@@ -68,3 +68,41 @@ const personObj = {
 personObj.age = 29; // Allowed, we are changing a property of the object, not reassigning the variable
 // personObj = { name: "Dave", age: 30 }; // Uncaught TypeError: Assignment to constant variable.
 
+// why var can be redeclared but let and const cannot
+var redeclareVar = "I can be redeclared";
+var redeclareVar = "I am redeclared"; // Allowed
+// let redeclareLet = "I cannot be redeclared";
+// let rede
+clareLet = "I am redeclared"; // Uncaught SyntaxError: Identifier 'redeclareLet' has already been declared
+// const redeclareConst = "I cannot be redeclared";
+// const redeclareConst = "I am redeclared"; // Uncaught SyntaxError: Identifier 'redeclareConst' has already been declared     
+
+// 2. data types and type system
+let num = 42; // number
+let str = "Hello, World!"; // string
+let bool = true;
+let arr = [1, 2, 3]; // array
+let obj = { name: "Alice", age: 30 };
+let undef; // undefined
+let nul = null; // null
+console.log(typeof num); // "number"
+console.log(typeof str);
+console.log(typeof bool);
+console.log(typeof arr); // "object" (arrays are objects in JavaScript)
+console.log(typeof obj);
+console.log(typeof undef); // "undefined"
+console.log(typeof nul); // "object" (this is a quirk in JavaScript)
+
+// primitives  and reference types
+let primitiveStr = "Hello";
+let referenceArr = [1, 2, 3];
+// primitives are immutable
+primitiveStr[0] = "h";  
+console.log(primitiveStr); // "Hello" (unchanged)
+// reference types are mutable
+referenceArr[0] = 0;  
+console.log(referenceArr); // [0, 2, 3] (changed)
+
+
+
+
