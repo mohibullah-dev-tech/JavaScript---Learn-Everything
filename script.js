@@ -103,6 +103,14 @@ console.log(primitiveStr); // "Hello" (unchanged)
 referenceArr[0] = 0;  
 console.log(referenceArr); // [0, 2, 3] (changed)
 
+//dynamic typing
+let dynamicVar = "I am a string";
+console.log(typeof dynamicVar); // "string"
+dynamicVar = 100;
+console.log(typeof dynamicVar); // "number"
+dynamicVar = true;
+console.log(typeof dynamicVar); // "boolean"
+
 
 
 
