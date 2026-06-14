@@ -111,6 +111,15 @@ console.log(typeof dynamicVar); // "number"
 dynamicVar = true;
 console.log(typeof dynamicVar); // "boolean"
 
+//typeof operator
+console.log(typeof 42); // "number"
+console.log(typeof "Hello"); // "string"
+console.log(typeof true); // "boolean"
+console.log(typeof undefined); // "undefined"
+console.log(typeof null); // "object" (this is a quirk in JavaScript)
+console.log(typeof [1, 2, 3]); // "object" (arrays are objects in JavaScript)
+console.log(typeof { name: "Alice" }); // "object"
+
 
 
 
