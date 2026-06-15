@@ -120,6 +120,42 @@ console.log(typeof null); // "object" (this is a quirk in JavaScript)
 console.log(typeof [1, 2, 3]); // "object" (arrays are objects in JavaScript)
 console.log(typeof { name: "Alice" }); // "object"
 
+// type coercion
+console.log("5" + 10); // "510" (string concatenation)
+console.log("5" - 2); // 3 (string "5" is coerced to number)
+console.log("5" * 2); // 10 (string "5" is coerced to number)
+console.log("5" / 2); // 2.5 (string "5" is coerced to number)
+console.log(5 + true); // 6 (true is coerced to 1)
+console.log(5 + false); // 5 (false is coerced to 0)    
+
+// truthy and falsy values
+if (0) {
+    console.log("This will not be printed"); // 0 is falsy
+}
+if ("") {
+    console.log("This will not be printed"); // empty string is falsy
+}
+if (null) {
+    console.log("This will not be printed"); // null is falsy
+}
+if (undefined) {
+    console.log("This will not be printed"); // undefined is falsy
+}
+if (NaN) {
+    console.log("This will not be printed"); // NaN is falsy
+}
+if (1) {
+    console.log("This will be printed"); // 1 is truthy
+}   
+if ("Hello") {
+    console.log("This will be printed"); // non-empty string is truthy
+}   
+if ([]) {
+    console.log("This will be printed"); // empty array is truthy
+}
+if ({}) {
+    console.log("This will be printed"); // empty object is truthy
+}
 
 
 
