@@ -290,3 +290,33 @@ console.log(playRPS("scissors", "rock")); // "Player 2 wins!"
 console.log(playRPS("rock", "rock")); // "It's a tie!"
 console.log(playRPS("paper", "paper")); // "It's a tie!"
 console.log(playRPS("scissors", "scissors")); // "It's a tie!"
+
+//loops (for, while, do-while)
+for (let i = 0; i < 5; i++) {
+    console.log(i); // prints 0 to 4
+}
+let j = 0;
+while (j < 5) {
+    console.log(j); // prints 0 to 4
+    j++;
+}
+let k = 0;
+do {
+    console.log(k); // prints 0 to 4
+    k++;
+} while (k < 5);
+
+// break and continue
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {  
+        break; // exits the loop when i is 5
+    }           
+    console.log(i); // prints 0 to 4    
+}
+for (let i = 0; i < 10; i++) {
+    if (i % 2 === 0) {  
+        continue; // skips the rest of the loop body for even numbers
+    }           
+    console.log(i); // prints odd numbers from 1 to 9    
+}
+
