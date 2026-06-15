@@ -208,5 +208,85 @@ console.log(typeof { name: "Alice" }); // "object"
 console.log([] instanceof Array); // true (checks if [] is an instance of Array)    
 console.log({} instanceof Object); // true (checks if {} is an instance of Object)
 
+// operator precedence
+let result = 10 + 5 * 2;    
+console.log(result); // 20 (multiplication has higher precedence than addition)
+result = (10 + 5) * 2;    
+console.log(result); // 30 (parentheses change the order of evaluation)
 
+// if else else-if switch case early return pattern
+let score1 = 85;
+if (score1 >= 90) {
+    console.log("Grade: A");
+} else if (score1 >= 80) {
+    console.log("Grade: B");
+}
+else if (score1 >= 70) {
+    console.log("Grade: C");
+}   
+else if (score1 >= 60) {
+    console.log("Grade: D");
+}
+else {
+    console.log("Grade: F");
+}
 
+//switch case
+let day = 3;
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;  
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;  
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;  
+    default:
+        console.log("Invalid day");
+}
+
+//early return pattern
+function isEven(num) {
+    if (num % 2 !== 0) {
+        return false; // early return for odd numbers
+    }   
+    return true; // return true for even numbers
+}
+console.log(isEven(4)); // true
+console.log(isEven(7)); // false
+
+// rock paper scissors game
+function playRPS(player1, player2) {
+    if (player1 === player2) {  
+        return "It's a tie!";
+    }
+    if ((player1 === "rock" && player2 === "scissors") ||
+        (player1 === "paper" && player2 === "rock") ||
+        (player1 === "scissors" && player2 === "paper")) {  
+        return "Player 1 wins!";
+    }   
+    return "Player 2 wins!"; // Player 2 wins in all other cases
+}
+console.log(playRPS("rock", "scissors")); // "Player 1 wins!"
+console.log(playRPS("paper", "rock")); // "Player 1 wins!"
+console.log(playRPS("scissors", "paper")); // "Player 1 wins!"
+console.log(playRPS("rock", "paper")); // "Player 2 wins!"
+console.log(playRPS("paper", "scissors")); // "Player 2 wins!"
+console.log(playRPS("scissors", "rock")); // "Player 2 wins!"
+console.log(playRPS("rock", "rock")); // "It's a tie!"
+console.log(playRPS("paper", "paper")); // "It's a tie!"
+console.log(playRPS("scissors", "scissors")); // "It's a tie!"
