@@ -157,5 +157,56 @@ if ({}) {
     console.log("This will be printed"); // empty object is truthy
 }
 
+// operators and expressions
+let a = 10;
+let b = 5;
+console.log(a + b); // 15 (addition)
+console.log(a - b); // 5 (subtraction)
+console.log(a * b); // 50 (multiplication)
+console.log(a / b); // 2 (division)
+console.log(a % b); // 0 (modulus)
+console.log(a ** b); // 100000 (exponentiation)
+console.log(a > b); // true (greater than)
+console.log(a < b); // false (less than)
+console.log(a >= b); // true (greater than or equal to)
+console.log(a <= b); // false (less than or equal to)
+console.log(a == b); // false (equality)
+console.log(a === b); // false (strict equality)
+console.log(a != b); // true (inequality)
+console.log(a !== b); // true (strict inequality)   
+
+// logical operators
+let x = true;
+let y = false;
+console.log(x && y);
+
+// false (logical AND)
+console.log(x || y);
+// true (logical OR)
+console.log(!x);
+// false (logical NOT)  
+
+//unary and binary operators
+let num1 = 5;
+let num2 = 10;
+console.log(-num1); // -5 (unary negation)
+console.log(num1 + num2); // 15 (binary addition)
+
+//tarnary operator
+let age1 = 20;
+let isAdult = age1 >= 18 ? "Yes" : "No";
+console.log(isAdult); // "Yes" (ternary operator)
+
+//typeof and instanceof operators
+console.log(typeof num1); // "number"
+console.log(typeof "Hello"); // "string"
+console.log(typeof true); // "boolean"
+console.log(typeof undefined); // "undefined"
+console.log(typeof null); // "object" (this is a quirk in JavaScript)
+console.log(typeof [1, 2, 3]); // "object" (arrays are objects in JavaScript)
+console.log(typeof { name: "Alice" }); // "object"
+console.log([] instanceof Array); // true (checks if [] is an instance of Array)    
+console.log({} instanceof Object); // true (checks if {} is an instance of Object)
+
 
 
