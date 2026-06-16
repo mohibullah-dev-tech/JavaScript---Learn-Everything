@@ -393,8 +393,18 @@ const arr2 = [4, 5, 6];
 const combinedArr = [...arr1, ...arr2];
 console.log(combinedArr); // [1, 2, 3, 4, 5, 6] (spread operator expands arrays into individual elements)
 
+// return values and early returns
+function isEven(num) {
+    if (num % 2 !== 0) {
+        return false; // early return for odd numbers
+    }
+    return true; // return true for even numbers
+}
+console.log(isEven(4)); // true
+console.log(isEven(7)); // false
 
 
+ 
 
 
 
