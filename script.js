@@ -431,6 +431,20 @@ console.log(evenNumbers);
 const sum = numbers.reduce((total, num) => total + num, 0);
 console.log(sum); // 15 (reduce applies a function against an accumulator and each element to reduce it to a single value)
 
+//pure vs impure functions
+function pureAdd(a, b) {
+    return a + b; // pure function: returns the same output for the same input and has no side effects
+}   
+console.log(pureAdd(5, 10)); // 15
+let count = 0;
+function impureIncrement() {
+    count++; // impure function: modifies external state (side effect)
+    return count;
+}
+console.log(impureIncrement()); // 1
+console.log(impureIncrement()); // 2 (output changes due to side effect)
+
+
  
 
 
