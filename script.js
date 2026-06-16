@@ -372,6 +372,29 @@ const greetArrow = (name) => {
 };
 console.log(greetArrow("Charlie")); // "Hello, Charlie!"
 
+// parameters and arguments
+function add(a, b) {
+    return a + b;
+}
+console.log(add(5, 10)); // 15 (arguments passed to parameters a and b)
+
+// default ,rest, and spread operators
+function greetWithDefault(name = "Guest") {
+    return "Hello, " + name + "!";
+}
+console.log(greetWithDefault()); // "Hello, Guest!" (default parameter)
+console.log(greetWithDefault("Alice")); // "Hello, Alice!" (argument provided)
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+console.log(sum(1, 2, 3)); // 6 (rest parameter collects arguments into an array)
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combinedArr = [...arr1, ...arr2];
+console.log(combinedArr); // [1, 2, 3, 4, 5, 6] (spread operator expands arrays into individual elements)
+
+
+
 
 
 
