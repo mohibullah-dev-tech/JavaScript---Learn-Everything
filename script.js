@@ -468,6 +468,34 @@ function outerFunction() {
 }
 outerFunction();
 
+// IIFE (Immediately Invoked Function Expressions)
+(function() {
+    console.log("This is an IIFE"); // IIFE is a function that runs as soon as it is defined
+})(); // Output: "This is an IIFE"
+
+//hoisting difference between function declaration and function expression
+
+// use rest parameter to accept any number of scores and return the total
+function totalScore(...scores) {
+
+    let total=0;
+    scores.forEach(function(val){
+        total+=val;
+    });
+    return total;
+}
+console.log(totalScore(85, 90, 78)); // 253 (rest parameter collects arguments into an array and reduce sums them up)   
+
+// can you assign a function to a variable and then call it? demonstrate with an example.
+const greet = function(name) {
+    return "Hello, " + name + "!";
+};
+console.log(greet("Alice")); // "Hello, Alice!" (function assigned to a variable and called)
+
+// pass a function into another function and execute it inside.
+function executeFunction(func, name) {
+    return func(name); // pass function as an argument and execute it
+}
 
  
 
