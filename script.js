@@ -421,7 +421,16 @@ function createGreeter(greeting) {
 const greeter = createGreeter("Hi");
 console.log(greeter("Charlie")); // "Hi, Charlie!"  
 
- 
+// higher order functions (map, filter, reduce)
+const numbers = [1, 2, 3, 4, 5];
+const squared = numbers.map(num => num * num);
+console.log(squared); // [1, 4, 9, 16, 25] (map creates a new array with the results of calling a function on every element)
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers);
+// [2, 4] (filter creates a new array with all elements that pass the test implemented by the provided function)
+const sum = numbers.reduce((total, num) => total + num, 0);
+console.log(sum); // 15 (reduce applies a function against an accumulator and each element to reduce it to a single value)
+
  
 
 
