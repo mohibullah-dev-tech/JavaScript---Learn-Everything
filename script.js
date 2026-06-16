@@ -355,3 +355,30 @@ for (let i = 1; i <= 100; i++) {
         break; // stops the loop after printing the first 5 odd numbers
     }
 }
+
+
+// start function
+// function declarations,expressions,and arrow functions
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+console.log(greet("Alice")); // "Hello, Alice!"
+const greetExpression = function(name) {
+    return "Hello, " + name + "!";
+};  
+console.log(greetExpression("Bob")); // "Hello, Bob!"
+const greetArrow = (name) => {
+    return "Hello, " + name + "!";
+};
+console.log(greetArrow("Charlie")); // "Hello, Charlie!"
+
+
+
+
+
+
+
+
+
+
+
