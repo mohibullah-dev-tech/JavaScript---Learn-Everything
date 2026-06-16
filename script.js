@@ -320,3 +320,38 @@ for (let i = 0; i < 10; i++) {
     console.log(i); // prints odd numbers from 1 to 9    
 }
 
+// user input and output
+let userName = prompt("Enter your name:");
+alert("Hello, " + userName + "!");
+
+// stop at first multiple of 7 
+// write a loop from 1 to 100 that prints each number and stops completely when it finds the first number divisible by 7
+for (let i = 1; i <= 100; i++) {
+    console.log(i); // prints the current number
+    if (i % 7 === 0) {
+        break; // stops the loop when a number divisible by 7 is found
+    }   
+} 
+
+// skip multiples of 3 
+// write a loop from 1 to 50 that prints all others and  skips numbers divisible by .use continue
+for (let i = 1; i <= 50; i++) {
+    if (i % 3 === 0) {
+        continue; // skips numbers divisible by 3
+    }
+    console.log(i); // prints numbers that are not divisible by 3
+}
+
+// print first 5 odd numbers only 
+// write a loop from 1 to 100 that prints only the first 5 odd numbers and then stops completely.use both if,continue,and a counter + break
+let oddCount = 0;
+for (let i = 1; i <= 100; i++) {
+    if (i % 2 === 0) {
+        continue; // skips even numbers
+    }   
+    console.log(i); // prints odd numbers
+    oddCount++;
+    if (oddCount === 5) {
+        break; // stops the loop after printing the first 5 odd numbers
+    }
+}
