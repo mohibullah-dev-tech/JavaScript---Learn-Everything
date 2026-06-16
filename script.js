@@ -403,7 +403,25 @@ function isEven(num) {
 console.log(isEven(4)); // true
 console.log(isEven(7)); // false
 
+// first class function(assign to variable , pass as argument, return from another function)
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+const greetFunc = greet; // assign function to a variable
+console.log(greetFunc("Alice"));
+function callGreet(func, name) {
+    return func(name); // pass function as an argument
+}
+console.log(callGreet(greet, "Bob")); // "Hello, Bob!"
+function createGreeter(greeting) {
+    return function(name) { // return a function from another function  
+        return greeting + ", " + name + "!";
+    }
+}
+const greeter = createGreeter("Hi");
+console.log(greeter("Charlie")); // "Hi, Charlie!"  
 
+ 
  
 
 
