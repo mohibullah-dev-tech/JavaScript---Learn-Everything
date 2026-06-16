@@ -444,6 +444,30 @@ function impureIncrement() {
 console.log(impureIncrement()); // 1
 console.log(impureIncrement()); // 2 (output changes due to side effect)
 
+// closures and lexical scoping
+function outer() {
+    let outerVar = "I am from the outer function";
+    function inner() {
+        console.log(outerVar); // inner function has access to outer function's variable due to closure
+    }
+    return inner;
+}
+const innerFunc = outer();
+innerFunc(); // "I am from the outer function" (closure allows inner function to access outerVar even after outer has finished executing)
+
+// lexical scoping example
+function outerFunction() {
+    let outerVar = "I am an outer variable";
+    function innerFunction() {
+        let innerVar = "I am an inner variable";
+        console.log(outerVar); // Accessing outer variable (lexical scoping)
+        console.log(innerVar); // Accessing inner variable
+    }   
+    innerFunction();
+    // console.log(innerVar); // Uncaught ReferenceError: innerVar is not defined (innerVar is not accessible here)
+}
+outerFunction();
+
 
  
 
