@@ -497,7 +497,14 @@ function executeFunction(func, name) {
     return func(name); // pass function as an argument and execute it
 }
 
- 
+// create ,access,modify arrays
+let fruits = ["apple", "banana", "cherry"]; // create an array
+console.log(fruits[0]); // access first element (apple)
+fruits[1] = "blueberry"; // modify second element
+console.log(fruits); // ["apple", "blueberry", "cherry"]    
+
+
+
 
 
 
