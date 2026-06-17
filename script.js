@@ -589,6 +589,21 @@ console.log(user.name); // "Mohibullah" (dot notation)
 console.log(user["age"]); // 25 (bracket notation)
 console.log(user["favorite color"]); // "blue" (bracket notation required for keys with spaces) 
 
+// nesting and deep access
+const company = {
+    name: "Tech Co",    
+    employees: [
+        { name: "Alice", position: "Developer" },
+        { name: "Bob", position: "Designer" }
+    ],  
+    address: {
+        street: "123 Main St",
+        city: "New York"    
+    }
+};
+console.log(company.employees[0].name); // "Alice" (deep access to nested object)
+console.log(company.address.city); // "New York" (deep access to nested object)
+
 
 
 
