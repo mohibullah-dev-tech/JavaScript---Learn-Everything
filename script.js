@@ -628,6 +628,19 @@ console.log(copy1); // { name: "Alice", age: 30 }
 console.log(copy2); // { name: "Alice", age: 30 }
 console.log(deepClone); // { name: "Alice", age: 30 }
 
+// optional chaining ,computed properties
+const user = {
+    name: "Alice",
+    address: {  
+        street: "123 Main St",
+        city: "New York"
+    }
+};
+console.log(user.address?.street); // "123 Main St" (optional chaining allows safe access to nested properties)
+console.log(user.contact?.email); // undefined (optional chaining returns undefined instead of throwing an error for non-existent properties)
+const propName = "name";
+console.log(user[propName]); // "Alice" (computed property access using bracket notation)
+
 
 
 
