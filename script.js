@@ -503,6 +503,26 @@ console.log(fruits[0]); // access first element (apple)
 fruits[1] = "blueberry"; // modify second element
 console.log(fruits); // ["apple", "blueberry", "cherry"]    
 
+// array methods: push,pop,shift,unshift,slice,splice,reverse,sort
+fruits.push("date"); // add element to the end
+console.log(fruits);   // ["apple", "blueberry", "cherry", "date"]
+fruits.pop(); // remove last element
+console.log(fruits);    // ["apple", "blueberry", "cherry"]
+fruits.shift(); // remove first element
+console.log(fruits);   // ["blueberry", "cherry"]
+fruits.unshift("apricot"); // add element to the beginning
+console.log(fruits);   // ["apricot", "blueberry", "cherry"]
+let slicedFruits = fruits.slice(1, 3); // create a new array from index 1 to 2
+console.log(slicedFruits); // ["blueberry", "cherry"]
+fruits.splice(1, 1, "blackberry"); // remove 1 element at index 1 and add "blackberry"
+console.log(fruits);   // ["apricot", "blackberry", "cherry"]
+fruits.reverse(); // reverse the array
+console.log(fruits);   // ["cherry", "blackberry", "apricot"]
+fruits.sort(); // sort the array
+console.log(fruits);   // ["apricot", "blackberry", "cherry"]       
+
+
+
 
 
 
