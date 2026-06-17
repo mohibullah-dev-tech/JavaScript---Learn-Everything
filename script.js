@@ -604,6 +604,12 @@ const company = {
 console.log(company.employees[0].name); // "Alice" (deep access to nested object)
 console.log(company.address.city); // "New York" (deep access to nested object)
 
+// object destructuring 
+const { name: companyName, employees, address: { city } } = company; // object destructuring with nested objects
+console.log(companyName); // "Tech Co"
+console.log(employees); // [{ name: "Alice", position: "Developer" }, { name: "Bob", position: "Designer" }]
+console.log(city); // "New York" (destructured from nested object)  
+
 
 
 
