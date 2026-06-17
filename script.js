@@ -579,6 +579,17 @@ class Person {
 const person1 = new Person("Alice", 30);
 console.log(person1.greet()); // "Hello, my name is Alice and I am 30 years old."
 
+// Dot vs Bracket Notation
+const user = {
+    name: "Mohibullah",
+    age: 25,
+    "favorite color": "blue"
+};
+console.log(user.name); // "Mohibullah" (dot notation)
+console.log(user["age"]); // 25 (bracket notation)
+console.log(user["favorite color"]); // "blue" (bracket notation required for keys with spaces) 
+
+
 
 
 
