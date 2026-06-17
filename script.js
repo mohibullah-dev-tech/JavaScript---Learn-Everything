@@ -557,6 +557,27 @@ const arr2 = [4, 5, 6];
 const combinedArr = [...arr1, ...arr2];
 console.log(combinedArr); // [1, 2, 3, 4, 5, 6] (spread operator expands arrays into individual elements)
 
+// objects and classes
+const user = {
+  name: "Mohibullah",
+  age: 25,
+  isStudent: true
+};
+console.log(user.name); // "Mohibullah"
+console.log(user.age); // 25
+console.log(user.isStudent); // true    
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }   
+    greet() {
+        return "Hello, my name is " + this.name + " and I am " + this.age + " years old.";
+    }   
+}
+const person1 = new Person("Alice", 30);
+console.log(person1.greet()); // "Hello, my name is Alice and I am 30 years old."
 
 
 
