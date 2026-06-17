@@ -521,7 +521,41 @@ console.log(fruits);   // ["cherry", "blackberry", "apricot"]
 fruits.sort(); // sort the array
 console.log(fruits);   // ["apricot", "blackberry", "cherry"]       
 
+// map, filter ,reduce,find,some,every (array methods intro level)
+const numbers = [1, 2, 3, 4, 5];
+const squared = numbers.map(num => num * num);
+console.log(squared); // [1, 4, 9, 16, 25] (map creates a new array with the results of calling a function on every element)
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // [2, 4] (filter creates a new array with all elements that pass the test implemented by the provided function)
+const sum = numbers.reduce((total, num) => total + num, 0);
+console.log(sum); // 15 (reduce applies a function against an accumulator and each element to reduce it to a single value)
+const found = numbers.find(num => num > 3);
+console.log(found); // 4 (find returns the first element that satisfies the provided testing function)
+const hasEven = numbers.some(num => num % 2 === 0);
+console.log(hasEven); // true (some tests whether at least one element in the array passes the test implemented by the provided function)
+const allEven = numbers.every(num => num % 2 === 0);
+console.log(allEven); // false (every tests whether all elements in the array pass the test implemented by the provided function)   
 
+// forEach, for...of, for...in (array and object iteration)
+const fruits = ["apple", "banana", "cherry"]; 
+fruits.forEach(fruit => console.log(fruit)); // prints each fruit in the array
+for (const fruit of fruits) {
+    console.log(fruit); // prints each fruit in the array
+}
+const person = { name: "Alice", age: 30, city: "New York" }; // object to iterate
+for (const key in person) {
+    console.log(key + ": " + person[key]); // prints each key and value in the object
+}
+
+// destructuring,spread operator
+const person = { name: "Alice", age: 30, city: "New York" };
+const { name, age } = person; // object destructuring
+console.log(name); // "Alice"
+console.log(age); // 30
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combinedArr = [...arr1, ...arr2];
+console.log(combinedArr); // [1, 2, 3, 4, 5, 6] (spread operator expands arrays into individual elements)
 
 
 
