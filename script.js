@@ -611,6 +611,14 @@ console.log(employees); // [{ name: "Alice", position: "Developer" }, { name: "B
 console.log(city); // "New York" (destructured from nested object)  
 
 
+// looping: for-in, object.keys, object.values, object.entries
+for (const key in company) {
+    console.log(key); // prints each key in the company object
+}
+console.log(Object.keys(company)); // ["name", "employees", "address"] (returns an array of the object's own enumerable property names)
+console.log(Object.values(company)); // ["Tech Co", [{ name: "Alice", position: "Developer" }, { name: "Bob", position: "Designer" }], { street: "123 Main St", city: "New York" }] (returns an array of the object's own enumerable property values)
+console.log(Object.entries(company)); // [["name", "Tech Co"], ["employees", [{ name: "Alice", position: "Developer" }, { name: "Bob", position: "Designer" }]], ["address", { street: "123 Main St", city: "New York" }]] (returns an array of the object's own enumerable property [key, value] pairs) 
+
 
 
 
