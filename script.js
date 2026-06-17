@@ -619,6 +619,15 @@ console.log(Object.keys(company)); // ["name", "employees", "address"] (returns 
 console.log(Object.values(company)); // ["Tech Co", [{ name: "Alice", position: "Developer" }, { name: "Bob", position: "Designer" }], { street: "123 Main St", city: "New York" }] (returns an array of the object's own enumerable property values)
 console.log(Object.entries(company)); // [["name", "Tech Co"], ["employees", [{ name: "Alice", position: "Developer" }, { name: "Bob", position: "Designer" }]], ["address", { street: "123 Main St", city: "New York" }]] (returns an array of the object's own enumerable property [key, value] pairs) 
 
+// coping objects:spread, object.assign,deep clone
+const original = { name: "Alice", age: 30 };
+const copy1 = { ...original }; // shallow copy using spread operator
+const copy2 = Object.assign({}, original); // shallow copy using Object.assign
+const deepClone = JSON.parse(JSON.stringify(original)); // deep clone using JSON methods (note: this method has limitations with functions and undefined values)
+console.log(copy1); // { name: "Alice", age: 30 }
+console.log(copy2); // { name: "Alice", age: 30 }
+console.log(deepClone); // { name: "Alice", age: 30 }
+
 
 
 
